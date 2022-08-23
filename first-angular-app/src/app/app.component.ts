@@ -13,4 +13,9 @@ import { Component } from '@angular/core';
   // `]
 })
 export class AppComponent {
+  username = "";
+
+  onDeleteUsername(event: any)  {
+    this.username = "";
+  }
 }
