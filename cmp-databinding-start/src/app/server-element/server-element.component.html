@@ -1,10 +1,9 @@
-<div
-        class="panel panel-default">
-        <div class="panel-heading">{{ element.name }}</div>
-        <div class="panel-body">
-          <p>
-            <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
-            <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
-          </p>
-        </div>
-      </div>
+<div class="panel panel-default">
+  <div class="panel-heading">{{name}}</div>
+  <!-- <div class="panel-heading">{{ element.name }}</div> -->
+  <div class="panel-body">
+    <!-- using ng-content tells Angular to add in that place any content found between the opening -->
+    <!-- and closing tags of that component in its parent component, in this case, in app-component -->
+    <ng-content></ng-content>
+  </div>
+</div>
